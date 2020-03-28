@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Aclonica&display=swap);
+
+$theme-font: 'Aclonica, sans-serif';
+$main-color: #3DFF42;
+
+$theme-font: 'Aclonica, sans-serif';
+$has-color: #FFD430;
+
+body {
+    background: $main-color;
+    font-family: $theme-font;
+}
+
+header{
+    background: $main-color;
+    font-family: $theme-font;
+}
+
+footer{
+    background: $main-color;
+    font-family: $theme-font;
+}
+
+input{
+    $theme-font: 'Aclonica, sans-serif';
+    $has-color: #FFD430;
+}
