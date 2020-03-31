@@ -1,7 +1,7 @@
-
+@import "./Vars.scss";
 .header { 
     align-items: center;
-    background: ;
+    background: $main-color;
     color: white;
     display: flex;
     height: 100px;
