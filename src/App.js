@@ -1,20 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import axios from 'axios';
 import './App.css';
+import App from './App';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          ¡Hola Mundo! <code> 
-          Helena Perez</code>
-        </p>
-        
-      </header>
-    </div>
-  );
+class App extends Component{
+constructor(){
+super();
+
+this.state = {
+  names:[]
+};
+
+axios.get("http://localhost:3001/names")
+.then(response =>{
+  this.setState({
+    names: response.data
+})
+})
+.catch(error=> {
+  console.log(error);
+})
 }
 
-export default App; //exportamos el componente 
+render(){
+  return(
+    <div>
+        <h1>Hola mundo</h1>
+          <ul>{this.state.names.map(name =>
+  <li key={name}>{name}</li>
+  )}
+  </ul>
+  </div>
+  );
+}
+}
+export default App;
