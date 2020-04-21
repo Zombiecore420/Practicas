@@ -22,4 +22,16 @@ class App extends Component{
   })
   }
   
-  
+  render(){
+    return(
+      <div>
+          <h1>Hola mundo Quiroz Palma Alex Nail</h1>
+            <ul>{this.state.names.map(name =>
+    <li key={name}>{name}</li>
+    )}
+    </ul>
+    </div>
+    );
+  }
+  }
+  export default App;
